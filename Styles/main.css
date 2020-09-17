@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+
+body{
+    width: 100%;
+    height: 100%; 
+    background-image: url("../Images/marble.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+p{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'High Tide';
+    src: url('../fonts/hightide-demo-webfont.woff2') format('woff2'),
+         url('../fonts/hightide-demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*nav start*/
+#home{
+    width: 100%;
+    height: 100vh;
+}
+
+#contact-header{
+    width: 100%;
+}
+
+.landing-text{
+    position: absolute;
+    display: block;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+    z-index: 1;
+}
+
+.landing-text span{
+    display: block;
+}
+
+.landing-text h1{
+    font-size: 14.5rem;
+    font-family: 'High Tide', sans-serif;
+    background: linear-gradient(to bottom, #a5cad2, #ff7a89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text 3s 1;
+}
+
+.landing-text h2{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 590;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #a76c71;
+    animation: text 5s 1;
+    margin-top: 4px;
+}
+
+.logo{
+    font-family: 'High Tide', sans-serif;
+    position: fixed;
+    margin-left: 8%;
+    width: 50%;
+    margin-top: 1.5rem;
+    font-size: 3.5rem;
+    z-index: 1500;
+    background-image: linear-gradient(to bottom, rgb(133, 172, 184), #c45d66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fixed-nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: linear-gradient(to right, #d8c0c2, #d8c0c2);
+    opacity: .8;
+    z-index: 1500;
+    line-height: 70px;
+    margin: 0;
+    top: 0px;
+}
+
+.fixed-nav  a {
+    font-size: 2rem;
+    position: relative;
+    color:  #6e484b;
+    padding: 0px 25px;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 1500;
+}
+
+.fixed-nav a:hover {
+    background-color: #eee;
+    opacity: .5;
+    color: #9c2331;
+    padding: 0px 25px;
+}
+
+.top-nav{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: -100vh;
+    background: linear-gradient(to top, #a5cad2, #d8c0c2);
+    opacity: .8;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    margin: 1rem 2rem;
+}
+
+
+.nav-link{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 570;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: #6e484b;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    background: #eee;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-nav.open{
+    top: 0;
+    border-radius: initial;
+}
+
+.menu-toggler{
+    position: fixed;
+    top: 2.5rem;
+    left: 2rem;
+    width: 3.5rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: start;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+    
+}
+
+.menu-toggler.open{
+    transform: rotate(-45deg);
+}
+
+.bar{
+    background: linear-gradient(to right, rgb(76, 115, 128), rgb(133, 172, 184));
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+}
+
+.bar.half{
+    width: 50%;
+}
+
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start{
+    transform: rotate(-450deg) translateX(.8rem);
+}
+
+.bar.end{
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end{
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+/*nav end*/
+
+
+/*About*/
+.about{
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 10rem;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12rem;
+    font-family: 'High Tide', sans-serif;
+    background: linear-gradient(to bottom, #a5cad2, #ff7a89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    user-select: none;
+    animation: text 5s 1;
+}
+
+.about-content{
+    flex: 1;
+    box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #eee;
+    opacity: .5;
+}
+
+.about-content p{
+    text-align: center;
+}
+
+.about-content h3{
+    -webkit-animation: fadein 2s;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 3.8rem;
+    display: block;
+    color:  #6e484b;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about-content ul li{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.companies{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.companies-img{
+    padding-top: 1rem;
+    display: inline-block;
+    padding-right: 2rem;   
+    opacity: 1;
+}
+
+#ms{
+    width: 150px;
+    height: 90px;
+}
+
+#hm{
+    width: 140px;
+}
+
+#amz{
+    width: 150px;
+    padding-bottom: 2rem;
+}
+
+#cna{
+    width: 120px;
+}
+
+#ww{
+    width: 105px;
+    opacity: 100;
+}
+/*About End*/
+
+
+/*contact page*/
+.contact{
+    width: 50%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.contact h2{
+    font-size: 18rem;
+}
+
+.contact h3 {
+    padding-bottom: .5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #a16e72;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 34px;
+    text-align: center;
+}
+
+.contact p{
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.accordion {
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+    opacity: .8;
+    background: #be777f;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    max-width: 10px 0;
+    align-items: center;
+}
+
+.fa-plus-circle{
+    position: relative;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: #eee;
+    transition: all .5s ease-in;
+}
+
+.accordion h3{
+    font-size: 24px;
+    color: #eee;
+}
+
+.panel{
+    -webkit-animation: fadein 1s;
+    margin: 1.5rem;
+    padding: 1rem 15px;
+    border-left: 2px solid #be777f;
+    margin-left: 20px;
+    font-size: 14px;
+    text-align: justify;
+    overflow: hidden;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.panel p{
+    color: #c45d66;
+}
+
+.contact-form{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    top: 5%;
+    min-height: 460px;
+    padding-left: 10px;
+}
+
+.contact-form h3{
+    font-size: 2.5rem;
+    padding-left: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    text-align: center;
+    color: #eee;
+}
+
+input, textarea{
+    background: #dbb3b8;
+    border-radius: 20px;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    outline: none;
+}
+
+label{
+    font-size: 2rem;
+    color: #be777f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button{
+    border-radius: 20px;
+    border: none;
+    background: #ca9095;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+button:focus{
+    outline: none;
+}
+
+.contact-info{
+    padding-top: 3rem;
+}
+
+.contact-info h3{
+    font-size: 2rem;
+}
+/*Contact End*/
+
+
+/*footer start*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #badbe2, #d8c0c2);
+    padding: 2rem 0;
+    position: relative;
+}
+
+.up{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+.up i {
+    color: #16162d;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.copyright p{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6e484b;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/*footer end */
+
+
+/*Keyframes for animations */
+@keyframes text{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        letter-spacing: 9px;
+        transform: scale(1.2);
+    }
+    85%{
+        letter-spacing: 1px;
+        
+    }
+}
+
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 #badbe2;
+    }
+    70%{
+        box-shadow: 0 0 0 1rem #badbe2;
+    }
+    100%{
+        box-shadow: 0 0 0 0 #d0d2d3;
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*key frames end*/
+
+
+/*Start media queries*/
+@media screen and (max-width: 600px){
+    body{
+        background: url("../images/marble.jpg") repeat center fixed;
+        
+    }
+
+    .menu-toggler{
+        top: 2.5rem;
+        right: 2rem;
+    }
+    
+    .logo{
+        display: none;
+    }
+
+    .landing-text {
+        width: 100%;
+    }
+    .landing-text h1{
+        font-size: 5rem;  
+    }
+
+    .landing-text h2{
+        
+        font-size: 2rem; 
+        font-weight: 600; 
+    }
+
+    .top-nav{
+        width: 100%;
+    }
+
+    .nav-link{
+        font-size: 4rem;
+    }
+
+    li {
+        margin: 5px;
+    }
+
+    .about{
+        width: 90%;
+    }
+    .about h2 {
+        font-size: 5rem;
+    }
+    
+    .contact {
+        width: 90%;
+    }
+
+    .contact h2{
+        font-size: 6rem;
+    }
+
+    .contact h3{
+        font-size: 2.5rem;
+    }
+
+    .contact p{
+        font-size: 2rem;
+    }
+
+    .accordion h3 {
+        font-size: 1.4rem;
+    }
+
+    .contact form {
+        padding: 0;
+    }
+    .contact-form h3 {
+        font-size: 2rem;
+    }
+}
+
+
+/*End media queries*/
