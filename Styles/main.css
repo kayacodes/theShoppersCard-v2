@@ -557,7 +557,7 @@ button:focus{
 /*Start media queries*/
 @media screen and (max-width: 600px){
     body{
-        background: url("../Images/marble.jpg") repeat center fixed;
+        background: url("/Images/marble.jpg") repeat center fixed;
         
     }
 
