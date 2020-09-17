@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'High Tide';
-    src: url('../fonts/hightide-demo-webfont.woff2') format('woff2'),
-         url('../fonts/hightide-demo-webfont.woff') format('woff');
+    src: url('../Fonts/hightide-demo-webfont.woff2') format('woff2'),
+         url('../Fonts/hightide-demo-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -766,7 +766,7 @@ button.ghost{
 /*Start media queries*/
 @media screen and (max-width: 600px){
     body{
-        background: url("../images/marble.jpg") repeat center fixed;
+        background: url("../Images/marble.jpg") repeat center fixed;
     }
 
     .signup-page{
