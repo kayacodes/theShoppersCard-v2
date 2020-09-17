@@ -1,8 +1,8 @@
 <?php
 
-$servername = "eu-cdbr-west-03.cleardb.net";
-$dbUsername = "b19d128e414970";
-$dbPassword = "a7636806";
+$servername = "localhost:3308";
+$dbUsername = "root";
+$dbPassword = "";
 $dbName = "user_registration";
 
 $conn = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
