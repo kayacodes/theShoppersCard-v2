@@ -36,7 +36,7 @@
                         exit();
                     }
                     else {
-                        header("Location: ../form.php?error=wrongPassword");
+                        header("Location: ../form.php?error=unabletoverifypwd");
                         exit();     
                     }
                 }

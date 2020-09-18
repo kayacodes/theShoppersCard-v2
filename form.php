@@ -24,7 +24,7 @@
     <div class="signup-page">
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-            <form action="PHP_Includes/signup.php" method="post">
+            <form action="/PHP_Includes/signup.php" method="post">
                 <h1>Create Account</h1>
                 <?php
                     if (isset($_GET["error"])){
@@ -51,7 +51,7 @@
             </div>
         
             <div class="form-container sign-in-container">
-                <form action="PHP_Includes/signin.php" method="post">
+                <form action="/PHP_Includes/signin.php" method="post">
                     <h1>Sign In</h1>
                     <?php
                         if (isset($_GET["error"])){
@@ -68,7 +68,7 @@
                     ?>
                     <input type="email" placeholder="Email" name="mail" />
                     <input type="password" placeholder="Password" name="pwd"  />
-                    
+
                     <?php
                         if (isset($_GET["newpwd"])){
                             if($_GET["newpwd"] == "passwordupdated") {
