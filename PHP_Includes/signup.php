@@ -63,7 +63,7 @@ if (isset($_POST['signup-submit'])){
                         else {
                             mysqli_stmt_bind_param($stmt, "i", $id);
                             mysqli_stmt_execute($stmt);
-                            header("Location: ../myaccount.php?signup=success");
+                            header("Location: ../form.php?signup=success");
                             exit();
                         }
                         
@@ -72,7 +72,7 @@ if (isset($_POST['signup-submit'])){
 
                    
 
-                    header("Location: ../myaccount.php?signup=success");
+                    header("Location: ../form.php?signup=success");
                     exit();
                 }
             }
