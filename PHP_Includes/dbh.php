@@ -1,21 +1,15 @@
 <?php
 
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"], 1);
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$active_group = 'default';
-$active_record = TRUE;
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
-$db['default']['hostname'] = $cleardb_server;
-$db['default']['username'] = $cleardb_username;
-$db['default']['password'] = $cleardb_password;
-$db['default']['database'] = $cleardb_db;
+$conn = new mysqli($server, $username, $password, $db);
 
-
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+/*$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);*/
 
 if (!$conn) {
     die("Connection Failed: ".mysqli_connect_error());
