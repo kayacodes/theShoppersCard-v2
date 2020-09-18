@@ -68,6 +68,7 @@
                     ?>
                     <input type="email" placeholder="Email" name="mail" />
                     <input type="password" placeholder="Password" name="pwd"  />
+                    
                     <?php
                         if (isset($_GET["newpwd"])){
                             if($_GET["newpwd"] == "passwordupdated") {
