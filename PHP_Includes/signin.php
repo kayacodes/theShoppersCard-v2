@@ -25,7 +25,7 @@
                 if ($row = mysqli_fetch_assoc($result)) {
                     $pwdCheck = password_verify($password, $row['pwd']);
                     if ($pwdCheck == false){
-                        header("Location: ../form.php?error=wrongPassword");
+                        header("Location: ../form.php?error=wrongPassword".$password);
                         exit(); 
                     }
                     else if ($pwdCheck == true) {
