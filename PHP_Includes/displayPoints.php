@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    require 'PHP_includes/dbh.php';
+    require 'dbh.php';
  
     $email = $_SESSION['email'];
     $id = $_SESSION['id'];
