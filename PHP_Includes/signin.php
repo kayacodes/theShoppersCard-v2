@@ -32,7 +32,7 @@
                         session_start();
                         $_SESSION['id'] = $row['id'];
                         $_SESSION['email'] = $row['email'];
-                        header("Location: /../myaccount.php?login=".$email."&id=".$row['id']);
+                        header("Location: /myaccount.php?login=".$email."&id=".$row['id']);
                         exit();
                     }
                     else {
