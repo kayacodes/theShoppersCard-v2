@@ -1,5 +1,5 @@
 <?php
-    include '/PHP_Includes/displayDetails.php';
+    include 'PHP_Includes/displayDetails.php';
 ?>
 
 <!DOCTYPE html>

@@ -1,13 +1,13 @@
 <?php
     session_start();
-    require 'PHP_includes/dbh.php';
+    require 'dbh.php';
  
     $email = $_SESSION['email'];
     $id = $_SESSION['id'];
     $sql = "SELECT * FROM userDetails WHERE id=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../form.php?error=sqlerror");
+        header("Location: ../myaccount.php?error=sqlerror");
         exit();
     }
     else {
