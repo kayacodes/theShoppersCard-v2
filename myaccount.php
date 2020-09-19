@@ -1,5 +1,5 @@
 <?php
-    include 'PHP_Includes/displayDetails.php';
+    include '/PHP_Includes/displayDetails.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +18,9 @@
     <header class="myacc-header">
         <?php
             if(isset($_SESSION['id'])){
-                include 'Snippets/loggedInNav.php'; 
+                include '/Snippets/loggedInNav.php'; 
             } else {
-                include 'Snippets/nav.php';
+                include '/Snippets/nav.php';
             }
         ?>
     </header>
@@ -34,7 +34,7 @@
                 <li><a onclick="switchForms('changePassword')";>Change Password</a></li>
             </ul>
             
-            <form  action="PHP_Includes/updateDetails.php" name="details" method="POST" class="details-form" id="details-form" data-aos="fade-up">
+            <form  action="/PHP_Includes/updateDetails.php" name="details" method="POST" class="details-form" id="details-form" data-aos="fade-up">
             <?php
                 if (isset($_GET["error"])){
                     if($_GET["error"] == "emptyfields") {
@@ -76,7 +76,7 @@
                 <button name="details-submit" >Submit</button>
             </form>
                 
-            <form action="PHP_Includes/updatePassword.php" class="details-form" id="password-form" method="POST" data-aos="fade-up">
+            <form action="/PHP_Includes/updatePassword.php" class="details-form" id="password-form" method="POST" data-aos="fade-up">
             <?php
                 if (isset($_GET["error"])){
                     if($_GET["error"] == "wrongPassword") {
@@ -103,7 +103,7 @@
         </div>
     </div>
     
-    <?php include 'Snippets/footer.php' ?>
+    <?php include '/Snippets/footer.php' ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
