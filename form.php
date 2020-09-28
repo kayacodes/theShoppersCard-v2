@@ -37,6 +37,9 @@
                         else if ($_GET["error"] == "idTaken") {
                             echo '<p> ID or E-Mail Taken! </p>';
                         }
+                        else if ($_GET["error"] == "invalidlength") {
+                            echo '<p> Incorrect ID Length! </p>';
+                        }
                     }
                     else if (isset($_GET["signup"]) == "success") {
                         echo '<p> Sign Up Successful!</p>';

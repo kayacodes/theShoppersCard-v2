@@ -15,6 +15,10 @@ if (isset($_POST['signup-submit'])){
         header("Location: ../form.php?error=invalidmail&uid=".$id);
         exit();
     }
+    else if (strlen(strval($id)) != 13){
+        header("Location: ../form.php?error=invalidlength&uid=".$id);
+        exit();
+    }
     else {
 
         $sql = "SELECT id FROM signup WHERE id =? OR email=?";
