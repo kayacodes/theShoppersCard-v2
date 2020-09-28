@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Styles/signup.css">
+    <link rel="stylesheet" href="styles/signup.css">
 </head>
 <body>
     <header>
@@ -22,42 +22,6 @@
     
     <div class="signup-page">
         <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <form action="PHP_Includes/reset-pwd.php" method="post"> 
-                    <h1>Set New Password</h1>
-                    <input type="hidden" name="selector" />
-                    <input type="hidden"  name="validator" />
-
-                    <input type="password" placeholder="Enter A New Password" name="pwd"  />
-                    <input type="password" placeholder="Repeat New Password" name="pwd-repeat"  />
-
-                    <button type="submit" name="reset-password-submit">Set New Password</button>
-                    <!--<?php
-                        $selector = $_GET["selector"];
-                        $validator = $_GET["validator"];
-                                
-                        if (empty($selector) || empty($selector)){
-                            echo "Could Not Validate Your Request";
-                        } else {
-                            if (ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false) { 
-                    ?>
-                            
-                        <input type="hidden" value="<?php echo $selector; ?>" name="selector" />
-                        <input type="hidden" value="<?php echo $validator; ?>" name="validator" />
-
-                        <input type="password" placeholder="Enter A New Password" name="pwd"  />
-                        <input type="password" placeholder="Repeat New Password" name="pwd-repeat"  />
-
-                        <button type="submit" name="reset-password-submit">Set New Password</button>
-                            </form>
-                        <?php
-                        }
-                    }
-                ?>-->
-                
-                </form>
-            </div>
-
             <div class="form-container sign-in-container">
             <form action="PHP_Includes/reset-request.php" method="post">
                 <h1>Reset Your Password</h1>
@@ -76,15 +40,11 @@
         
             <div class="overlay-container">
                 <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1>Forgot Your Password?</h1>
-                        <p>Fill In Your Details So We Can Reset It For You</p>
-                        <button class="ghost" id="signIn">Reset Password</button>
-                    </div>
+                    
                     <div class="overlay-panel overlay-right">
                         <h1>Hello, Friend!</h1>
-                        <p>Received Our E-Mail?</p>
-                        <button class="ghost" id="signUp">Set New Password</button>
+                        <p>Enter your E-mail to reset your password. You will receive an email with a link to where you can enter a new password.</p>
+                        
                     </div>
                 </div>
             </div>

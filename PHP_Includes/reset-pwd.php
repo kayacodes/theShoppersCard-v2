@@ -7,10 +7,10 @@
         $passwordRepeat = $_POST['pwd-repeat'];
 
         if (empty($password) || empty($passwordRepeat)){
-            header("Location: ../pwdReset.php?newpwd=empty");
+            header("Location: ../newPwd.php?newpwd=empty");
 
         } else if ($password != $passwordRepeat){
-            header("Location: ../pwdReset.php?newpwd=pwdnotsame");
+            header("Location: ../newPwd.php?newpwd=pwdnotsame");
             exit();
         }
 
