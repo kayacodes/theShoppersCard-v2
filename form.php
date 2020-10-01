@@ -38,7 +38,7 @@
                             echo '<p> ID or E-Mail Taken! </p>';
                         }
                         else if ($_GET["error"] == "invalidlength") {
-                            echo '<p> Incorrect ID Length! </p>';
+                            echo '<p>  ID Must Be 13 Characters Long! </p>';
                         }
                     }
                     else if (isset($_GET["signup"]) == "success") {
